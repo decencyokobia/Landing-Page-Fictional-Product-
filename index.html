@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Decency's Product Landing Page</title>
+    <meta name="description" content="Decency Okobia's Portfolio">
+    <meta property="og:title" content="my product landing page">
+    <meta property="og:description" content="watches for sale">
+    <meta property="og:image" content="url to thumbnail image">
+    <meta property="og:url" content="your website url">
+
+    <link rel="icon" href="Africa_(orthographic_projection).svg.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="main-container">
+
+        <!--Hero section with log and navigations-->
+        <header class="header">
+            <article class="logo">
+                <h1>FUTURE</h1>
+            </article>
+            <nav class="navigation">
+                <ul class="menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features-items">Features</a></li>
+                    <li><a href="#form">Contact</a></li>
+                    <li onclick="displaySidebar()" id="menu"><svg xmlns="http://www.w3.org/2000/svg" height="35px"
+                            viewBox="0 -960 960 960" width="35px" fill="#314D1C">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></li>
+                </ul>
+
+                <ul class="sidebar">
+                    <li onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#314D1C">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></li>
+                    <li><a href=" #about" class="sidebar_link">About</a></li>
+                    <li><a href="#features-items" class="sidebar_link">Features</a></li>
+                    <li><a href="#form" class="sidebar_link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--first section about the product-->
+        <section id="about" class="about">
+            <div class="img-container">
+                <img src="images/aboutimg.jpg" alt="image of AP diamond watch" width="400" height="350">
+            </div>
+            <div class="about-description">
+                <h2>Wear the Essence of Time.</h2>
+                <p>"Discover the perfect blend of style and versatility with our modern watches, available in a stunning
+                    array of colors. From classic black and silver tones for a timeless look to bold, vibrant shades
+                    that make a statement, there's a watch for every personality and occasion. Crafted with precision
+                    and designed for comfort, these watches are the ultimate accessory for those who value both
+                    functionality and fashion. Whether you're dressing for a formal event or adding flair to your
+                    everyday outfit, our diverse color options ensure you'll find a match that complements your unique
+                    style."</p>
+                <button type="button" class="my-button">Buy Now</button>
+            </div>
+
+        </section>
+
+
+        <!--second section leading to features-->
+        <section id="features" class="features">
+            <div class="img-container">
+                <img src="images/featureimg.jpeg" alt="image of AP watch on back background" width="300" height="350">
+            </div>
+            <div class="features-description">
+                <h2>Where precision meets perfection - every detail, a masterpiece.</h2>
+                <p>Our watches feature the finest diamonds, offering unmatched brilliance and timeless luxury. Wear the
+                    best
+                    - experience excellence in every detail.</p>
+                <button type="button" class="my-button">See the Features</button>
+            </div>
+        </section>
+
+        <!--product feature section-->
+        <section id="features-items" class="features-items">
+            <div class="featuresItems-description">
+                <h2>Product Features</h2>
+                <p>Packed with innovative features, <b><span style="color: #006eff;">F</span>UTURE</b> watches are
+                    designed to
+                    cater to your every
+                    need.
+                    Here is what makes it stand out:</p>
+            </div>
+
+            <!--grid container for items of the feature-->
+            <article class="featuresItems-boxes">
+                <div class="gridBox fiBox1">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h3>Sleek and Modern Design</h3>
+                    <p>Crafted with a lightweight, durable body and a customizable display, it combines style with
+                        functionality, making it perfect for any occasion</p>
+                </div>
+                <div class="gridBox fiBox2">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <h3>Advanced TimeKeeping</h3>
+                    <p>With precision down to the millisecond, multiple time zones, and an automatic calender, you'll
+                        never lose track of time no matter where you are.</p>
+                </div>
+                <div class="gridBox fiBox3">
+                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                    <h3>Fitness and Health Tracking</h3>
+                    <p>Track your steps, calories, heart rate, and sleep patterns seamlessly. Stay on top of your health
+                        and fitness goals with real-time data.</p>
+                </div>
+                <article class="gridBox fiBox4">
+                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                    <h3>Long Battery Life</h3>
+                    <p>Enjoy extended use with a battery that lasts days on a single charge, so you can focus on your
+                        day without constant chanrging.</p>
+                </article>
+                <article class="gridBox fiBox5">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                    <h3>Water-Resistant Build</h3>
+                    <p>Whether it's a splash, sweat, or a dive into a pool, the water-resistant design keeps your watch
+                        functioning perfectly.</p>
+                </article>
+                <article class="gridBox fiBox6">
+                    <i class="fa fa-diamond" aria-hidden="true"></i>
+                    <h3>A Timeless Statement</h3>
+                    <p>With it's classic design and enduring appeal, these watches are more than just timepieces -
+                        they're expressions of personality and style that stand the test of time.</p>
+                </article>
+
+            </article>
+        </section>
+
+        <!--Customer review section-->
+        <section class="testimonyBox">
+            <article class="customerContainer-header">
+                <h3>What Customers Say About Us:</h3>
+            </article>
+
+            <div class="customerContainer">
+                <div class="customer1">
+                    <h4>Elegant and Timeless</h4><span><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i></span>
+
+                    <p>"This watch is a masterpiece! The minimalist design and high-qaulity leather strap make it the
+                        perfect accessory for any occasion. It's comfortable to wear, keeps accurate time, and has
+                        become a staple in my wardrobe. Highly recommend for anyone who appreciates timeless
+                        elegance!"</p><span>- Alexandra M.</span>
+                </div>
+                <div class="customer2">
+                    <h4>Built to Last</h4><span><i class="fa fa-star" aria-hidden="true" style="color: gold;"></i><i
+                            class="fa fa-star" aria-hidden="true" style="color: gold;"></i><i class="fa fa-star"
+                            aria-hidden="true" style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i></span>
+                    <p>"I've owned this watch for over a year now, and it still looks brand new. The scratch-resistant
+                        glass
+                        and water-resistant build have held up perfectly, even with daily use. It's stylish, durable,
+                        and a
+                        great value for the price. I couldn't be happier with y purchase!"</p><span>- Darcie O.</span>
+                </div>
+                <div class="customer3">
+                    <h4>Perfect Blend of Style and Functionality</h4><span><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i><i class="fa fa-star" aria-hidden="true"
+                            style="color: gold;"></i></span>
+                    <p>"The watch combines classic aesthetics with modern craftsmanship. The intricate dail details are
+                        stunning, and the interchangeable straps allow me to match it with any outfit. It's a must-have
+                        for anyone looking to make a sophisticated statement."</p><span>- Sophie L.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Contact form, quite basic but enough for a product page-->
+        <form action="url" method="post" id="form">
+            <fieldset class="form-header">
+                <h4>Join the Newsletter</h4>
+                <p>Kindly complete this form.</p>
+            </fieldset>
+            <fieldset class="customer-details">
+                <div class="label">
+                    <label for="firstname">First Name: </label>
+                    <div class="input">
+                        <input type="text" name="firstname" id="firstname" required><span class="example-text"> e.g
+                            Decency</span>
+                    </div>
+                </div>
+                <div class="label">
+                    <label for="lastname">Last Name: </label>
+                    <div class="input">
+                        <input type="text" name="lastname" id="lastname" required><span class="example-text"> e.g
+                            Okobia</span>
+                    </div>
+                </div>
+                <div class="email-section">
+                    <label for="email">Email: </label>
+                    <div class="email-input">
+                        <input type="email" name="email" id="email" required><span class="example-text">
+                            e.g learncodingdee@yahoo.com</span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="messageBox">
+                <label for="message">Message: </label>
+                <textarea name="message" id="message" placeholder="type...." cols="25" rows="8"></textarea>
+            </fieldset>
+            <button type="submit" value="action" class="sub-button">Subscribe</button>
+        </form>
+
+    </main>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

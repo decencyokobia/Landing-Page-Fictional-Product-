@@ -1,0 +1,617 @@
+/*imported fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Resets my html*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fix key frame for color change and animations*/
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: #006eff;
+    }
+}
+
+/*My variables for styling and easy for me to make changes*/
+/*General Styles*/
+:root {
+    --LOGOFS: 1.6rem;
+    --LOGOFW: bolder;
+    --LOGOCOLOR: linear-gradient(to right, blue, red, green, yellow, orange);
+    --CAPFS: 2rem;
+    --NORMALFS: 1.1rem;
+    --PADDING: 0.5rem;
+    --MARGIN_BOTTOM: 1rem;
+    --MARGIN_TOP: 1rem;
+    --EXTRASMALLFS: 0.8rem;
+    --BUTTONHOVER: background-color 0.5s ease-in-out;
+    --BUTTONHOVER_BGCOLOR: #84b1ec;
+    --BUTTONSHADOW: 0px 0px 2px 1px var(--GRAY);
+
+    /*Colors*/
+    --BLACK: #000000;
+    --BLUE: #006eff;
+    --GRAY: #808080;
+    --WHITE: #ffffff;
+}
+
+
+body {
+    background-color: var(--WHITE);
+    font-family: "Raleway", "Roboto", serif;
+    font-size: 16px;
+}
+
+.main-container {
+    width: 375px;
+    min-width: 90vw;
+    padding: 15px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--HEADERFS);
+    align-items: center;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: var(--LOGOFS);
+    font-family: "Raleway";
+}
+
+.logo::first-letter{
+    color: var(--BLUE);
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    font-size: var(--EXTRASMALLFS);
+}
+
+.navigation a{
+    text-decoration: none;
+    color: var(--GRAY);
+}
+
+a:any-link:hover {
+    border-bottom: 2px solid var(--BLUE);
+    font-size: 14px;
+}
+
+.navigation .sidebar {
+    display: block;
+    width: 100%;
+    background-color: hsl(0, 0%, 50%);
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    opacity: 0.9;
+    display: none;
+}
+
+.navigation .sidebar li {
+    padding: 1rem;
+}
+
+.navigation .sidebar a {
+    color: black;
+    font-weight: 800;
+}
+
+.navigation .sidebar li:hover {
+    background-color: hsl(240, 100%, 90%);
+}
+
+
+.about, .features , .featuresItems-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    scroll-margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.img-container img {
+    display: flex;
+    justify-content: center;
+    width: clamp(300px, 90vw, 300px);
+    height: auto;
+    margin: auto;
+}
+
+.about-description h2, .features h2, .featuresItems-description h2{
+    font-size: var(--CAPFS);
+    font-family: "Raleway";
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.about-description p, .features p, .featuresItems-description p {
+    font-size: var(--NORMALFS);
+    padding: var(--PADDING);
+    color: var(--GRAY);
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.my-button {
+    background-color: var(--BLUE);
+    color: var(--WHITE);
+    padding: var(--PADDING);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--BUTTONHOVER);
+    font-weight: bolder;
+    box-shadow: var(--BUTTONSHADOW);
+}
+
+.my-button:hover {
+    background-color: var(--BUTTONHOVER_BGCOLOR);
+}
+
+.box-container {
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.box {
+    width: 50px;
+    height: 5px;
+    background-color: var(--GRAY);
+}
+
+.features {
+    position: relative;
+    color: var(--WHITE);
+    background-color: var(--BLACK);
+    padding-bottom: 1.5rem;
+    margin-bottom: var(--MARGIN_BOTTOM);
+    width: 100%;
+}
+
+.features::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: var(--BLACK);
+    left: -20px;
+    overflow: hidden;
+}
+
+.features::after {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: var(--BLACK);
+    right: -20px;
+    overflow: hidden;
+}
+
+.featuresItems-boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-areas:
+    'b1'
+    'b2'
+    'b3'
+    'b4'
+    'b5'
+    'b6';
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.gridBox {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    place-content: center;
+    padding: 2rem;
+    box-shadow: var(--BUTTONSHADOW);
+}
+
+/*fi stands for feature items or items in features*/
+
+.fiBox1 {
+    grid-area: b1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.fiBox2 {
+    grid-area: b2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.fiBox3 {
+    grid-area: b3;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.fiBox4 {
+    grid-area: b4;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.fiBox5 {
+    grid-area: b5;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+
+.fiBox6 {
+    grid-area: b6;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+
+.fiBox1 i, .fiBox2 i, .fiBox3 i, .fiBox4 i, .fiBox5 i, .fiBox6 i{
+    font-size: 70px;
+    color: #006eff;
+}
+
+.fiBox1 p, .fiBox2 p, .fiBox3 p, .fiBox4 p, .fiBox5 p, .fiBox6 p{
+    color: var(--GRAY);
+    font-size: var(--EXTRASMALLFS);
+}
+
+.testimonyBox {
+    margin-top: var(--MARGIN_TOP);
+    margin-bottom: var(--MARGIN_BOTTOM);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--PADDING);
+}
+
+.customerContainer-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid gold;
+    font-size: max(4.5vh, 25px);
+}
+
+.customerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.customer1, .customer2, .customer3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.customerContainer span {
+    font-weight: bold;
+}
+
+form {
+    padding: 0.5rem;
+    border: 1px solid gold;
+    width: clamp(350px, 90vw, 600px);
+    height: auto;
+    margin: auto;
+}
+
+.form-header {
+    display: block;
+    text-align: center;
+    border: none;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.form-header h4 {
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    font-style: italic;
+    color: gold;
+}
+
+.form-header p {
+    font-size: 0.8rem;
+    font-family: "Roboto";
+    font-style: italic;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.customer-details {
+    display: inline-block;
+    width: 100%;
+    border: none;
+}
+
+.label {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    font-weight: bolder;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: max(69.9%, 100vw);
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.email-section {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+.email-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-bottom: var(--MARGIN_BOTTOM);
+    width: min(90vw, 100%);
+    gap: 0.2rem;
+    font-weight: bold;
+}
+
+.sub-button {
+    display: block;
+    justify-self: center;
+    cursor: pointer;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--BUTTONSHADOW);
+    margin-top: 2rem;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.sub-button:hover {
+    background-color: hsl(51, 100%, 100%);
+}
+
+.example-text {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+/*Project was made first with mobile dimensions so will now set media queries for ipads and laptops*/
+@media screen and (max-width: 699px){
+
+    .navigation .menu li a {
+        display: none;
+    }
+
+    .navigation .menu #menu {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1700px){
+
+    #menu {
+        display: none;
+    }
+
+    .navigation .sidebar {
+        display: none;
+    }
+
+    .about, .features {
+        flex-direction: row;
+        gap: 1rem;
+        scroll-margin-top: 1rem;
+        text-align: left;
+        align-items: center;
+        margin-bottom: var(--MARGIN_BOTTOM);
+        font-size: clamp(5rem, 10vh, 20rem);
+    }
+
+    .features {
+        flex-direction: row-reverse;
+        padding: 1rem;
+    }
+
+    .about-description h2, .features h2, .featuresItems-description h2{
+        font-size: max(4.5vh, 25px);
+
+    }
+    
+    .about-description p, .features p, .featuresItems-description p {
+        font-size: max(1vh, 18px); 
+    }
+
+    .features::before {
+        width: 8vw;
+        left: -8%;
+        overflow: hidden;
+    }
+    
+    .features::after {
+        width: 8vw;
+        right: -8%;
+        overflow: hidden;
+    }
+    
+    
+    .featuresItems-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px 300px 300px;
+        grid-template-areas:
+        'b1 b2'
+        'b3 b4'
+        'b5 b6';
+        gap: 1rem;
+    }
+
+    /*fi stands for feature items or items in features*/
+    
+    .fiBox1 {
+        grid-area: b1;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .fiBox2 {
+        grid-area: b2;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .fiBox3 {
+        grid-area: b3;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .fiBox4 {
+        grid-area: b4;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .fiBox5 {
+        grid-area: b5;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    .fiBox6 {
+        grid-area: b6;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        margin-bottom: 0;
+    }
+
+    .customerContainer {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+/*Laptop or bigger screen view*/
+@media screen and (min-width: 1150px){
+
+    #menu {
+        display: none;
+    }
+
+    .navigation .sidebar {
+        display: none;
+    }
+
+    .features::before {
+        width: 90px;
+        height: 100%;
+        left: -90px;
+        overflow: hidden;
+    }
+    
+    .features::after {
+        width: 90px;
+        right: -90px;
+        overflow: hidden;
+    }
+    
+    .featuresItems-boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px 300px;
+        grid-template-areas:
+        'b1 b2 b3'
+        'b4 b5 b6';
+        gap: 1rem;
+    }
+
+    /*fi stands for feature items or items in features*/
+    
+    .fiBox1 {
+        grid-area: b1;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .fiBox2 {
+        grid-area: b2;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .fiBox3 {
+        grid-area: b3;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    
+    .fiBox4 {
+        grid-area: b4;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .fiBox5 {
+        grid-area: b5;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .fiBox6 {
+        grid-area: b6;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+

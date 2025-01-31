@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Decency's Product Landing Page</title>
     <meta name="description" content="Decency Okobia's Portfolio">
-    <meta property="og:title" content="my product landing page">
-    <meta property="og:description" content="watches for sale">
+    <meta property="og:title" content="my product landing page for a fictional watches page">
+    <meta property="og:description" content="my product landing page for a fictional watches page">
     <meta property="og:image" content="url to thumbnail image">
     <meta property="og:url" content="your website url">
 
-    <link rel="icon" href="Africa_(orthographic_projection).svg.ico" type="image/x-icon">
+    <link rel="icon" href="image.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css">
     <link rel="stylesheet" href="style.css">
@@ -45,9 +45,11 @@
                             <path
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></li>
-                    <li><a href=" #about" class="sidebar_link">About</a></li>
-                    <li><a href="#features-items" class="sidebar_link">Features</a></li>
-                    <li><a href="#form" class="sidebar_link">Contact</a></li>
+                    <div class="sidebar_link" onclick="revealSection()">
+                        <li id="about_section"><a href=" #about">About</a></li>
+                        <li id="feature_section"><a href="#features-items">Features</a></li>
+                        <li id="form_section"><a href="#form">Contact</a></li>
+                    </div>
                 </ul>
             </nav>
         </header>

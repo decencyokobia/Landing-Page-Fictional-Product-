@@ -1,17 +1,27 @@
+const sidebar = document.querySelector(".sidebar");
+
 function displaySidebar(){
-    const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "block";
-}
+};
 
 function closeSidebar(){
-    const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "none";
-}
+};
 
 
-const navLinks = document.querySelectorAll(".sidebar_link"); // Get all links inside the sidebar
+document.getElementById("about_section").addEventListener("click", function() {
+    window.location.href = "#about";
+    sidebar.style.display = "none";
+});
 
-// This loop will hide all the sidebar links (if that's your goal)
-navLinks.forEach(link => {
-    link.onclick = 'none'; // Hide each sidebar link
+
+document.getElementById("feature_section").addEventListener("click", function() {
+    window.location.href = "#features-items";
+    sidebar.style.display = "none";
+});
+
+
+document.getElementById("form_section").addEventListener("click", function() {
+    window.location.href = "#form";
+    sidebar.style.display = "none";
 });

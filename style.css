@@ -78,7 +78,8 @@ body {
     display: flex;
     list-style: none;
     gap: 1rem;
-    font-size: var(--EXTRASMALLFS);
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .navigation a{
@@ -88,17 +89,16 @@ body {
 
 a:any-link:hover {
     border-bottom: 2px solid var(--BLUE);
-    font-size: 14px;
 }
 
 .navigation .sidebar {
     display: block;
     width: 100%;
-    background-color: hsl(0, 0%, 50%);
+    background-color: hsl(0, 0%, 90%);
     min-height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     padding: 1rem;
     opacity: 0.9;
     display: none;
@@ -108,15 +108,18 @@ a:any-link:hover {
     padding: 1rem;
 }
 
-.navigation .sidebar a {
+.navigation .sidebar li a{
     color: black;
     font-weight: 800;
 }
 
 .navigation .sidebar li:hover {
-    background-color: hsl(240, 100%, 90%);
+    background-color: hsl(240, 17%, 76%);
 }
 
+.navigation .sidebar li a:hover{
+    border: none;
+}
 
 .about, .features , .featuresItems-description {
     display: flex;

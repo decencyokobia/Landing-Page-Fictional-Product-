@@ -51,6 +51,7 @@ body {
     background-color: var(--WHITE);
     font-family: "Raleway", "Roboto", serif;
     font-size: 16px;
+    margin: auto;
 }
 
 .main-container {
@@ -553,10 +554,6 @@ input, textarea {
     .customerContainer {
         flex-direction: row;
         gap: 2rem;
-    }
-
-    form {
-        width: 100vw;
     }
 }
 

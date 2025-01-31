@@ -421,6 +421,16 @@ input, textarea {
     font-weight: 700;
 }
 
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: red;
+    font-style: italic;
+}
+
 
 /*Project was made first with mobile dimensions so will now set media queries for ipads and laptops*/
 @media screen and (max-width: 699px){

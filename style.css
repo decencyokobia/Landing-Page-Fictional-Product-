@@ -554,6 +554,10 @@ input, textarea {
         flex-direction: row;
         gap: 2rem;
     }
+
+    form {
+        width: 100vw;
+    }
 }
 
 /*Laptop or bigger screen view*/
